@@ -1,0 +1,331 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Work Term Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My work term report for my four month co-op at Desire2Learn during 2023.">
+    <meta name="author" content="Mac">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    // add our menu functionality on load
+    window.addEventListener("load", () => {
+        const toggleMenu = () => {
+            // if we're showing menu, make it toggleable
+            let menuToggle = document.getElementById('menu-toggle');
+            if (window.getComputedStyle(menuToggle).display !== "none") {
+                let menu = document.getElementById("menu");
+                if (window.getComputedStyle(menu).display === "none") {
+                    menu.style.display = 'inline-block'
+                } else {
+                    menu.style.display = 'none'
+                }
+            }
+        };
+
+        let menuToggle = document.getElementById('menu-toggle');
+        let menu = document.getElementById("menu");
+        let children = menu.childNodes;
+        // make the menu options close menu on click
+        for (let i = 0; i < children.length; i++) {
+            if (children[i].nodeName !== "#text") {
+                let link = children[i].childNodes[0];
+                link.addEventListener("click", toggleMenu)
+            }
+        }
+        menuToggle.addEventListener("click", toggleMenu)
+    })
+
+    window.addEventListener("resize", () => {
+        let menuToggle = document.getElementById('menu-toggle');
+        let menu = document.getElementById("menu");
+        menu.style.display = ""
+        menu.style.boder = ""
+        menuToggle.style.display = ""
+    })
+</script>
+
+<body>
+    <header>
+        <img id="menu-toggle" src="media/menu-icon/2x/outline_menu_white_48dp.png" alt="menu button">
+        <ul id="menu">
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#my-job">My Job</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+            <li><a href="#summary">Summary</a></li>
+        </ul>
+    </header>
+    <a id="intro"></a>
+    <div id="header-space"></div>
+    <div id="main-text">
+        <section>
+            <div id="title">
+                <h1>Winter 2023 Work Term Report</h1>
+                <picture>
+                    <img id="RB-logo" src="https://www.d2l.com/wp-content/uploads/2022/08/logo.svg" alt="D2L Software logo">
+                </picture>
+            </div>
+            <a id="intro"></a>
+            <p>
+                &emsp;&emsp;Dear reader, in this article I will discuss my time at Desire2Learn 
+                (D2L) over the 2023 summer semester. I worked as a full stack developer and really 
+                enjoyed my time with the team. My work was interesting, the culture was excellent
+                 and I would go back in a heartbeat. As you read on I hope you’ll see why I enjoyed 
+                 my time so much. 
+
+ 
+            </p>
+            <h2>
+                &lt;About-Desire2Learn/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;D2L is the second largest company I’ve worked at, only second to Phenom which has a slightly larger headcount.
+                 D2L has been around for a while, more than 20 years in fact, and as of when I’m writing 
+                 this D2L employs nearly 1200 employees and provides services to over 16 million learners. 
+                 D2L is most known for its online learning platform, Brightspace which is used by small 
+                 classrooms, universities, and everything in between across the world. As a matter of fact,
+                  Guelph has its own instance of Brightspace for distributing its course organization online
+                  , instead of Brightspace we call it Courselink. 
+                  </p>
+                  <p>
+                  &emsp;&emsp;Now Brightspace is pretty neat and all but
+                   what’s really cool is D2Ls latest product, Wave. Wave is an online professional upskilling 
+                   platform built to streamline the process of connecting individuals with universities, colleges,
+                    and certification programs so that they can upgrade their professional self and progress their 
+                    careers. Wave only recently became available to businesses in the last three years, whereas
+                    Brightspace has been around basically since D2L started over 20 years ago. It’s also 
+                    worth mentioning that Wave is only run by one team of ~10 developers, which is where
+                     I found myself this term. In comparison, Brightspace consists of many teams each 
+                     with a significant number <a id="goals"></a>of developers. D2L also recently opened a large office 
+                     in the Catalyst building in downtown Waterloo, it’s pretty spectacular and I 
+                     really enjoyed the few times I was able to go in person. 
+            </p>
+        </section>
+        <section>
+            <h2>
+                &lt;Goals/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;Now that you’ve got the scoop on D2L, Brightspace, and Wave let’s talk 
+                about a couple goals I had for the term. Now that it’s my fifth co-op term I feel
+                 like I’ve gotten a chance to experiment with lots of different goals over my four 
+                 previous terms. This term I opted to go with more of what I would call ‘relaxed’ 
+                 goals. I get that part of having goals is that they should be specific, actionable 
+                 and measurable which these goals still are. The difference is that in the past I’ve 
+                 put my goals pretty far out ahead of me, and occasionally I’ve stressed myself out 
+                 trying to achieve them. Therefore this term I wanted to still set good goals which 
+                 would help me improve, but I wanted them to be pretty attainable and reasonable. So 
+                 let’s talk about the goals I set. 
+            </p>
+            <ul>
+                <li>
+                    Number one was that I wanted to focus a lot on being a team player.
+                     This was a bit of an odd one because part of my goal was specifically 
+                     to try and help people on my team learn new things or to help them 
+                     solve problems and squish bugs. But I’m just an intern, what do I 
+                     know that they don’t? Just kidding, kind of. At this point I feel 
+                     like I know a fair bit about web development and so I really wanted 
+                     to put my knowledge to work and help lift others around me up.
+                    <br />
+
+                </li>
+                <li>
+                    The next goal was very simple. I wanted to get more exposure to AWS stuff. 
+                    Going into the term I knew that Wave was based pretty heavily in AWS infrastructure 
+                    so if I could get exposure to multiple AWS services and really start to get an
+                     understanding of how everything fits together I felt like that would be very 
+                     beneficial for me.
+
+                    <br />
+
+                </li>
+                <li>
+                    The final goal I had in mind was to get more experience reviewing PRs, 
+                    particularly more complicated or large PRs. This has been a goal I’ve had
+                     across multiple terms and I put a lot of emphasis on it because I truly 
+                     believe it's a pretty different set of skills required to be really good at
+                      reviewing someone else’s work. To build these skills up requires practice, 
+                      hence me making this one of my goals. 
+                    <br />
+
+                </li>
+            </ul>           
+            <p>
+                &emsp;&emsp;Well there you go, those are my goals for the term. Pretty 
+                simple and attainable wouldn’t you say? We’ll see. In the following two 
+                sections I’ll detail some of the cool stuff I got to do and then we’ll 
+                reflect on my goals and see how attainable they really were. <a id="my-job"></a> 
+            </p>
+        </section>
+        <section>
+            <h2>
+                &lt;My-Job/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;This is the fun stuff, here you’ll get to see what I actually did for the 
+                last four months. First things first, onboarding. It’s a critical piece of the 
+                new employee experience and honestly I had a lot of fun with this part. There’s 
+                the usual mandatory courses about security and company culture but then I got 
+                right into work. One thing I appreciate about my team at D2L and luckily the 
+                same goes for all my previous teams at other companies is that they didn’t
+                 treat me like an intern. They treated me like any other dev, which is 
+                 exactly what I enjoy. Also, during the first week I got paired up with an
+                  ‘onboarding buddy’, this person volunteers to get annoyed by the new employee
+                   during their first couple weeks on the job. Whether it be technical questions
+                    or asking how the coffee machine in the office works, your onboarding buddy 
+                    has it covered. In all seriousness having someone who you can shamelessly
+                     ask many questions to is super beneficial and really speeds up the learning 
+                     and ramp-up process in my opinion. 
+                <br />
+                <br />
+                &emsp;&emsp;From here on out I’ll refer to the team I worked with as team ‘Nova’, 
+                since that’s the team’s actual name. Nova works in six week ‘sprints’ or 
+                ‘product cycles’. The team splits into two smaller teams during this time 
+                and each team completes a major change or feature over the course of six weeks.
+                 After those six weeks we have two weeks of cooldown. This two week span is dubbed 
+                 ‘dragonslayer’, still not totally sure where the name came from. The point of these
+                 two weeks is to try and clean up tech debt and work on any cool improvements that 
+                 team members thought up during the product cycles.  
+                <br />
+                <br />
+                &emsp;&emsp;My first product cycle started a week after I joined. Which was nice because
+                 I was able to do my onboarding and then start on a fresh cycle the following 
+                 week. My team of five devs decided to call ourselves team ‘unicorn-confetti’. 
+                 Not sure where the name came from but we really tried to embody the spirit of 
+                 unicorn-confetti. Our task was to implement a new widget that would be present
+                  in many parts of Wave. This widget would allow users to easily recommend and 
+                  share courses that they planned to take or had already completed with their 
+                  peers. Design work was already done so we got off to work right away. My first
+                   week was spent doing a lot of reading and watching. Any opportunity to join a 
+                   huddle and watch someone explain some code, I was there.  
+                <br />
+                <br />
+                &emsp;&emsp;After this week of reading I put up my first PR for a small bug fix. 
+                It got accepted and then I hopped into more unicorn-confetti related work.
+                I had to add some logic to fire Amplitude (analytics) events when users 
+                interacted with the widget in various ways. This was a fun task and I was
+                 able to poke around a bit in the frontend and backend of the app. Following 
+                 that we got to work on animations. Wave didn’t have animations anywhere else 
+                 at the time so this was a fun thing to work on and required lots of experimenting. 
+                 The animations that we were using are Lottie animations, and implementing them in 
+                 Lit-Elements was a bit of a struggle but we came up with a really clean and 
+                 accessible solution that could be reused in other parts of the app quite easily. 
+                 We continued developing and eventually got the feature merged right before the
+                  product cycle was up. 
+            </p>
+            <p>
+                  &emsp;&emsp;During my first dragonslayer I checked out our team's documents 
+                  of stuff that needed to be done. One of the things listed under ‘engineering goals’ 
+                  was to create some strategy around frontend state management. That sounded pretty 
+                  up my ally so to speak. So I spent a couple afternoons building out some documentation 
+                  about what I thought of our frontend state management at the moment and what I thought 
+                  could be done to improve it. State is a big deal in React but since the team uses Lit,
+                   everything looked a little bit different despite many of the principles being the same.
+            </p>
+            <p>
+                &emsp;&emsp;I stirred up some discussion over the frontend and during the two week cooldown
+                 I was able to create a plan for how we would improve the frontend, I 
+                 really enjoyed this and felt like I was doing something significant in regards
+                  to making positive change for the team. 
+          </p>
+          <p>
+            &emsp;&emsp;I’ll try and speed this up a bit since I’ve already typed out so many words but here
+             I was, ready to start the next product cycle. This time I got placed on team ‘fire’ who was 
+             responsible for removing a bunch of old code in order to clean up the logic for features which
+              would be coming in future product cycles. This time the team name made sense, fire, cleaning 
+              up code, setting it on fire. Okay, maybe it doesn’t make complete sense because removing 
+              code is much more technical than just setting it on fire. I think it makes more sense than
+               unicorn-confetti but what do I know? Anyhow, I did just that. I spent most of the cycle 
+               removing code. It was an interesting experience and gave me a unique perspective on how
+                much thought is required to remove a small bit of logic within a large system without 
+                screwing something somewhere else up. Towards the end of this cycle we wrapped up the 
+                code removal a tad bit early so I spent some more time working on the frontend state management docs. 
+      </p>
+      <p>
+        &emsp;&emsp;During the final week of the cycle I got to become the ‘supernova’. For comedic purposes 
+        I was tempted to leave that sentence without an explanation but I guess you might actually be 
+        curious what the heck a ‘supernova’ is in this context. Well, Wave does weekly deployments to 
+        prod. Usually on Tuesdays. One person every week is the designated supernova, this person is 
+        essentially an on call dev whose only focus is to ensure Wave is up and running and that the 
+        deployment goes smoothly, this person is also in charge of resolving any day to day support 
+        tickets and issues that are beyond the capabilities of our admins/support members. Since 
+        this week tends to be pretty hectic, the supernova becomes the ‘neutron star’ in the week 
+        following their supernova shift. As a neutron star, your days are much slower paced and you
+         tend to work on a specific backlog of items that need to be cleaned up and that are suitable
+          for one person to do over the course of a week. 
+  </p>
+  <p>
+    &emsp;&emsp;So yeah, that’s basically how those two weeks went. I got to release Wave V50.5.0 and 
+    proceeded to do a handful of hotfixes during the week. This was the largest quantity of PRs that 
+    the team had ever had in a release so there were a few rocky days during the week but all in all
+     it went pretty smoothly. I don’t think many interns anywhere get to run a weekly production 
+     deployment. It’s certainly a unique experience that I was very fortunate to have. Make no mistake, 
+     it took a lot of hard work over the term to prove to my manager that I was capable of such responsibility. 
+     I'm glad that the work paid off and that I was able to have this experience. 
+</p>
+            <p>
+                &emsp;&emsp;That was more or less the gist of what I did at D2L. I skipped on quite 
+                a few details for the sake of brevity but trust<a id="reflections"></a> that I learned and did a lot at D2L
+                 and that my time here was truly an incredible opportunity. 
+        <section>
+            <h2>
+                &lt;Reflections/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;Now that you’re up to speed with what exactly I did over the last 
+                four months lets go look at those goals I talked about many paragraphs ago. 
+                <br />
+                <br />
+                &emsp;&emsp;My first goal related to being a better team player. This was honestly
+                 really easy to achieve and I’d like to attribute it primarily to my team’s culture.
+                  Everyone on the team was incredibly easy going and open to help. This made it easy
+                   for me to find the help I needed when I needed it but it also gave me the chance 
+                   to easily help others when they needed it. Overall, I was really happy with this 
+                   goal as I sort of achieved it naturally due to the way my team was set up. The 
+                   next goal was to get more exposure to AWS tech. I think I crushed this goal. I 
+                   got to play with all sorts of stuff. Messing around in Dynamo, exploring traffic 
+                   and logs in our Lambdas, replaying events in our SQS dead letter queue. There’s 
+                   so many areas of AWS that I didn’t even know existed that the team uses. 
+                   <br />
+                   <br />
+                   &emsp;&emsp;The most exposure I got was during my time as supernova because I was 
+                   constantly on the lookout for alarms and trying to understand why and how something
+                    was breaking. This typically required me to navigate multiple AWS services to 
+                    resolve a problem, and once I got the hang of it I felt great. AWS was a very 
+                    daunting thing in the past and now that I have some knowledge of it I’m excited 
+                    to see what my future work with AWS will entail. Finally my last goal was to 
+                    review large and more complicated PRs. This goal was actually really hard to 
+                    achieve, and I would say I missed on this one. The reason it was hard to achieve
+                     is that the team does such a good job of breaking down tasks and tickets that no
+                      PR was ever so significant that it seemed intimidating. Everyone usually left 
+                      steps on how to test their PR as well as a short explanation of their changes.
+                       The PRs that I had to review this term were some of the easiest to understand 
+                       and review that I’ve ever seen primarily because they were so well divided and
+                        documented. All in, I’m pretty happy with how my goals turned out despite missing
+                         the mark on the last one. In hindsight perhaps I should have modified the goal 
+                         to better fit my environment, that’s something for me to consider in the future.
+            </p>
+        </section>
+        <section>
+            <a id="summary"></a>
+            <h2>
+                &lt;Summary/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;In conclusion, I had an amazing time at D2L working on team Nova. 
+                Wave is an incredible product and I can’t wait to see it succeed in the coming 
+                years. My team was fantastic and I can’t get over how friendly and welcoming 
+                everyone was. I truly felt right at home with this team. Over the last four
+                 months I learned a lot, laughed a lot, and hope that someday I’ll find my 
+                 way back to the offices of D2L. 
+            </p>
+        </section>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
